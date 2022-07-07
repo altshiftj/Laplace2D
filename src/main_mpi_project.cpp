@@ -8,6 +8,24 @@
 #include "Parameter.h"
 #include "utilities.h"
 
+vector<double> slice(vector<int>& arr,
+                    int X, int Y)
+{
+ 
+    // Starting and Ending iterators
+    auto start = arr.begin() + X;
+    auto end = arr.begin() + Y + 1;
+ 
+    // To store the sliced vector
+    vector<int> result(Y - X + 1);
+ 
+    // Copy vector using copy function()
+    copy(start, end, result.begin());
+ 
+    // Return the final sliced vector
+    return result;
+}
+
 int main(int argc, char **argv)
 {
     MPI_Init(&argc, &argv);
@@ -125,6 +143,31 @@ int main(int argc, char **argv)
         double diff;
         /* in the parallel version: Do the send and receive here. Prefer doing it in the background (nonblocking / async). Watch out for deadlocks! */
         /* ... */
+
+
+        /* Populate send buffers */
+        /* draft code */
+        //rightSendBuffer = rank0, rank2, right side.
+        for(size_t y=2; y < entireGrid.ny() - 2; y++){
+            rightSendBuffer[y-2] = oldData[entireGrid.pos(entireGrid.nX()-2,y)]
+        }
+        
+        //leftSendBuffer = rank1, rank3, left side.
+        for(size_t y=2; y < entireGrid.ny() - 2; y++){
+            leftSendBuffer[y-2] = oldData[entireGrid.pos(2,y)]
+        }
+
+        //topSendBuffer = rank2, rank3, top side.
+        for(size_t x=2; x < entireGrid.nx() - 2; x++){
+            topSendBuffer[x-2] = oldData[entireGrid.pos(x,2)]
+        }
+
+        //bottomSendBuffer = rank0, rank1, bottom side.
+        for(size_t x=2; x < entireGrid.nx() - 2; x++){
+            bottomSendBuffer[x-2] = oldData[entireGrid.pos(x,entireGrid.nY()-2)]
+        }
+
+        
 
         /* first do the calculations without the ghost layers */
         for (size_t y = 2; y < entireGrid.ny() - 2; y++)
