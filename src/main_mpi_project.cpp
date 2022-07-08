@@ -8,24 +8,6 @@
 #include "Parameter.h"
 #include "utilities.h"
 
-vector<double> slice(vector<int>& arr,
-                    int X, int Y)
-{
- 
-    // Starting and Ending iterators
-    auto start = arr.begin() + X;
-    auto end = arr.begin() + Y + 1;
- 
-    // To store the sliced vector
-    vector<int> result(Y - X + 1);
- 
-    // Copy vector using copy function()
-    copy(start, end, result.begin());
- 
-    // Return the final sliced vector
-    return result;
-}
-
 int main(int argc, char **argv)
 {
     MPI_Init(&argc, &argv);
@@ -149,17 +131,24 @@ int main(int argc, char **argv)
         /* draft code */
         //left and right send buffers
         for(size_t y=1; y < entireGrid.ny() - 1; y++){
-            rightSendBuffer[y-1] = oldData[entireGrid.pos(entireGrid.nX()-1,y)]
-            leftSendBuffer[y-1] = oldData[entireGrid.pos(1,y)]
+            rightSendBuffer[y-1] = oldData[entireGrid.pos(entireGrid.nx()-1,y)];
+            leftSendBuffer[y-1] = oldData[entireGrid.pos(1,y)];
         }
 
         //top and bottom send buffers
         for(size_t x=1; x < entireGrid.nx() - 1; x++){
-            topSendBuffer[x-1] = oldData[entireGrid.pos(x,1)]
-            bottomSendBuffer[x-1] = oldData[entireGrid.pos(x,entireGrid.nY()-1)]
+            topSendBuffer[x-1] = oldData[entireGrid.pos(x,1)];
+            bottomSendBuffer[x-1] = oldData[entireGrid.pos(x,entireGrid.ny()-1)];
         }
 
-        
+        if(isLeftBoundaryCell){
+            //send buffer
+            MPI_Status status;
+            MPI_Request request;
+            const int destinationRankId = myRank + 1;
+            const int tag = 0;
+            //MPI_Isend(&rightSendBuffer,entireGrid.ny()-2,MPI_Double,)
+        }
 
         /* first do the calculations without the ghost layers */
         for (size_t y = 2; y < entireGrid.ny() - 2; y++)
