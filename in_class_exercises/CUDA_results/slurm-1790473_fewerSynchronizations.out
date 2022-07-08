@@ -1,0 +1,104 @@
+SLURM_JOBID=1790473
+SLURM_JOB_NODELIST=gpu06
+SLURM_NNODES=1
+SLURM_TASKS_PER_NODE=1
+working directory = /home/y0078217/Laplace2D
+
+Number of devices: 1
+Device set: 0
+Grid: 1024, 256
+time step: 1000 error: 0.255803 MNUPS: 21552
+time step: 2000 error: 0.0886718 MNUPS: 21993
+time step: 3000 error: 0.0475303 MNUPS: 22210
+time step: 4000 error: 0.0304689 MNUPS: 22457
+time step: 5000 error: 0.0215478 MNUPS: 22454
+time step: 6000 error: 0.0162174 MNUPS: 22401
+time step: 7000 error: 0.0127421 MNUPS: 23883
+time step: 8000 error: 0.0103322 MNUPS: 24068
+time step: 9000 error: 0.0085826 MNUPS: 24118
+time step: 10000 error: 0.00726646 MNUPS: 24082
+time step: 11000 error: 0.00624801 MNUPS: 24078
+time step: 12000 error: 0.00544164 MNUPS: 24136
+time step: 13000 error: 0.00479097 MNUPS: 24149
+time step: 14000 error: 0.00425754 MNUPS: 24168
+time step: 15000 error: 0.00381426 MNUPS: 24503
+time step: 16000 error: 0.00344158 MNUPS: 24573
+time step: 17000 error: 0.00312502 MNUPS: 24463
+time step: 18000 error: 0.00285367 MNUPS: 24540
+time step: 19000 error: 0.00261915 MNUPS: 24523
+time step: 20000 error: 0.00241492 MNUPS: 24484
+time step: 21000 error: 0.00223582 MNUPS: 24429
+time step: 22000 error: 0.00207773 MNUPS: 24467
+time step: 23000 error: 0.00193733 MNUPS: 24551
+time step: 24000 error: 0.00181191 MNUPS: 24352
+time step: 25000 error: 0.00169927 MNUPS: 24692
+time step: 26000 error: 0.00159758 MNUPS: 24538
+time step: 27000 error: 0.00150533 MNUPS: 24668
+time step: 28000 error: 0.00142126 MNUPS: 24579
+time step: 29000 error: 0.00134431 MNUPS: 24495
+time step: 30000 error: 0.0012736 MNUPS: 24553
+time step: 31000 error: 0.00120838 MNUPS: 24533
+time step: 32000 error: 0.00114801 MNUPS: 24550
+time step: 33000 error: 0.00109196 MNUPS: 24605
+time step: 34000 error: 0.00103975 MNUPS: 24740
+time step: 35000 error: 0.000990996 MNUPS: 24530
+time step: 36000 error: 0.000945346 MNUPS: 24503
+time step: 37000 error: 0.000902506 MNUPS: 24591
+time step: 38000 error: 0.000862218 MNUPS: 24557
+time step: 39000 error: 0.000824256 MNUPS: 24487
+time step: 40000 error: 0.000788423 MNUPS: 24512
+time step: 41000 error: 0.000754545 MNUPS: 24569
+time step: 42000 error: 0.000722467 MNUPS: 24534
+time step: 43000 error: 0.000692054 MNUPS: 24481
+time step: 44000 error: 0.000663184 MNUPS: 24723
+time step: 45000 error: 0.000635749 MNUPS: 24763
+time step: 46000 error: 0.000609649 MNUPS: 24476
+time step: 47000 error: 0.000584798 MNUPS: 24652
+time step: 48000 error: 0.000561117 MNUPS: 24631
+time step: 49000 error: 0.000538531 MNUPS: 24493
+time step: 50000 error: 0.000516976 MNUPS: 24440
+time step: 51000 error: 0.000496391 MNUPS: 24481
+time step: 52000 error: 0.000476722 MNUPS: 24477
+time step: 53000 error: 0.000457916 MNUPS: 24439
+time step: 54000 error: 0.000439928 MNUPS: 24441
+time step: 55000 error: 0.000422713 MNUPS: 24478
+time step: 56000 error: 0.000406232 MNUPS: 24564
+time step: 57000 error: 0.000390447 MNUPS: 24627
+time step: 58000 error: 0.000375324 MNUPS: 24562
+time step: 59000 error: 0.000360829 MNUPS: 24557
+time step: 60000 error: 0.000346933 MNUPS: 24385
+time step: 61000 error: 0.000333606 MNUPS: 24560
+time step: 62000 error: 0.000320823 MNUPS: 24426
+time step: 63000 error: 0.000308557 MNUPS: 24675
+time step: 64000 error: 0.000296786 MNUPS: 24520
+time step: 65000 error: 0.000285487 MNUPS: 24483
+time step: 66000 error: 0.000274638 MNUPS: 24526
+time step: 67000 error: 0.00026422 MNUPS: 24473
+time step: 68000 error: 0.000254215 MNUPS: 24393
+time step: 69000 error: 0.000244603 MNUPS: 24502
+time step: 70000 error: 0.000235369 MNUPS: 24482
+time step: 71000 error: 0.000226495 MNUPS: 24563
+time step: 72000 error: 0.000217968 MNUPS: 24569
+time step: 73000 error: 0.000209771 MNUPS: 24535
+time step: 74000 error: 0.000201892 MNUPS: 24552
+time step: 75000 error: 0.000194318 MNUPS: 24539
+time step: 76000 error: 0.000187035 MNUPS: 24415
+time step: 77000 error: 0.000180033 MNUPS: 24453
+time step: 78000 error: 0.000173298 MNUPS: 24532
+time step: 79000 error: 0.000166822 MNUPS: 24548
+time step: 80000 error: 0.000160592 MNUPS: 24652
+time step: 81000 error: 0.0001546 MNUPS: 24679
+time step: 82000 error: 0.000148836 MNUPS: 24575
+time step: 83000 error: 0.000143291 MNUPS: 24650
+time step: 84000 error: 0.000137955 MNUPS: 24615
+time step: 85000 error: 0.000132822 MNUPS: 24424
+time step: 86000 error: 0.000127882 MNUPS: 24496
+time step: 87000 error: 0.000123129 MNUPS: 24886
+time step: 88000 error: 0.000118555 MNUPS: 24509
+time step: 89000 error: 0.000114153 MNUPS: 24571
+time step: 90000 error: 0.000109917 MNUPS: 24763
+time step: 91000 error: 0.00010584 MNUPS: 24727
+time step: 92000 error: 0.000101915 MNUPS: 24486
+time step: 93000 error: 9.81377e-05 MNUPS: 24563
+Runtime: 1 s. 
+Average MNUPS:17941
