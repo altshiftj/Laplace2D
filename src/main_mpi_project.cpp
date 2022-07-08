@@ -147,24 +147,16 @@ int main(int argc, char **argv)
 
         /* Populate send buffers */
         /* draft code */
-        //rightSendBuffer = rank0, rank2, right side.
-        for(size_t y=2; y < entireGrid.ny() - 2; y++){
-            rightSendBuffer[y-2] = oldData[entireGrid.pos(entireGrid.nX()-2,y)]
-        }
-        
-        //leftSendBuffer = rank1, rank3, left side.
-        for(size_t y=2; y < entireGrid.ny() - 2; y++){
-            leftSendBuffer[y-2] = oldData[entireGrid.pos(2,y)]
+        //left and right send buffers
+        for(size_t y=1; y < entireGrid.ny() - 1; y++){
+            rightSendBuffer[y-1] = oldData[entireGrid.pos(entireGrid.nX()-1,y)]
+            leftSendBuffer[y-1] = oldData[entireGrid.pos(1,y)]
         }
 
-        //topSendBuffer = rank2, rank3, top side.
-        for(size_t x=2; x < entireGrid.nx() - 2; x++){
-            topSendBuffer[x-2] = oldData[entireGrid.pos(x,2)]
-        }
-
-        //bottomSendBuffer = rank0, rank1, bottom side.
-        for(size_t x=2; x < entireGrid.nx() - 2; x++){
-            bottomSendBuffer[x-2] = oldData[entireGrid.pos(x,entireGrid.nY()-2)]
+        //top and bottom send buffers
+        for(size_t x=1; x < entireGrid.nx() - 1; x++){
+            topSendBuffer[x-1] = oldData[entireGrid.pos(x,1)]
+            bottomSendBuffer[x-1] = oldData[entireGrid.pos(x,entireGrid.nY()-1)]
         }
 
         
